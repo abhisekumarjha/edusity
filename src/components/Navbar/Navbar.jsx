@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <nav className={`container ${sticky ? 'dark-nav' : ""}`}>
-            <img src={"src/assets/logo.png"} alt="logo" className='logo' />
+            <img src={"/assets/logo.png"} alt="logo" className='logo' />
             <ul className={menu ? "" : "hide-menu"}>
                 <li><Link to='hero' smooth={true} duration={500} offset={0}>Home</Link></li>
                 <li>
