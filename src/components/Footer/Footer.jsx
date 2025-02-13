@@ -1,5 +1,5 @@
-import React from 'react'
-import './Footer.css'
+import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
     const currYear = new Date(Date.now()).getFullYear();
@@ -12,7 +12,7 @@ const Footer = () => {
                 <li>Privacy Policy</li>
             </ul>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

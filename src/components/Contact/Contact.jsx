@@ -1,5 +1,11 @@
-import React from 'react'
-import './Contact.css'
+import React from 'react';
+import './Contact.css';
+
+import msgIcon from '../../../public/assets/msg-icon.png';
+import mailIcon from '../../../public/assets/mail-icon.png';
+import phoneIcon from '../../../public/assets/phone-icon.png';
+import locationIcon from '../../../public/assets/location-icon.png';
+import whiteArrow from '../../../public/assets/white-arrow.png';
 
 const Contact = () => {
 
@@ -28,16 +34,15 @@ const Contact = () => {
         }
     };
 
-
     return (
         <div className='contact'>
             <div className="contact-col">
-                <h3>Send us a Message <img src={"src/assets/msg-icon.png"} alt="msgIcon" /></h3>
+                <h3>Send us a Message <img src={msgIcon} alt="msgIcon" /></h3>
                 <p>Feel free to reach out through contact form or find our contact information below. Your feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our university community.</p>
                 <ul>
-                    <li><img src={"src/assets/mail-icon.png"} alt="mail-icon" /> Contact@GreatStack.dev</li>
-                    <li><img src={"src/assets/phone-icon.png"} alt="phone-icon" />+1 123-456-7890</li>
-                    <li><img src={"src/assets/location-icon.png"} alt="location-icon" />77 Massachusetts Ave, Cambridge<br />
+                    <li><img src={mailIcon} alt="mail-icon" /> Contact@GreatStack.dev</li>
+                    <li><img src={phoneIcon} alt="phone-icon" />+1 123-456-7890</li>
+                    <li><img src={locationIcon} alt="location-icon" />77 Massachusetts Ave, Cambridge<br />
                         MA 02139, United States</li>
                 </ul>
             </div>
@@ -49,12 +54,12 @@ const Contact = () => {
                     <input type="tel" name="phone" id="phone" placeholder='Enter Phone Number' required />
                     <label htmlFor="message">Write Us</label>
                     <textarea name="message" id="message" rows="5" placeholder='Message' required></textarea>
-                    <button type="submit" className='btn dark-btn'>Submit <img src={"src/assets/white-arrow.png"} alt="white-arrow" /></button>
+                    <button type="submit" className='btn dark-btn'>Submit <img src={whiteArrow} alt="white-arrow" /></button>
                 </form>
                 <span>{result}</span>
             </div>
-        </div >
-    )
-}
+        </div>
+    );
+};
 
-export default Contact
+export default Contact;

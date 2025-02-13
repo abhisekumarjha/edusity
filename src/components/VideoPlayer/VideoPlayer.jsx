@@ -1,5 +1,8 @@
-import React, { useRef } from 'react'
-import './VideoPlayer.css'
+import React, { useRef } from 'react';
+import './VideoPlayer.css';
+
+// Import the video from 'public/assets'
+import videoSrc from '../../../public/assets/video.mp4';
 
 const VideoPlayer = ({ playState, setPlayState }) => {
 
@@ -9,14 +12,13 @@ const VideoPlayer = ({ playState, setPlayState }) => {
         if (e.target === player.current) {
             setPlayState(false);
         }
-
     };
 
     return (
         <div className={`video-player ${playState ? "" : "hide"}`} ref={player} onClick={closePlayer}>
-            <video src={"src/assets/video.mp4"} autoPlay muted controls></video>
-        </div >
-    )
-}
+            <video src={videoSrc} autoPlay muted controls></video>
+        </div>
+    );
+};
 
-export default VideoPlayer
+export default VideoPlayer;
